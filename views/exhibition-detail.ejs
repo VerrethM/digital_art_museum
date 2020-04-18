@@ -1,0 +1,41 @@
+<%- include("header"); -%>
+<%- include("nav"); -%>
+
+  <article>
+    <div class="detail">
+      <div class="contain">
+        <img src="/img/<%=item.image%>" alt="<%=item.artist%>">
+        <h4 class=><%=item.title %></h4>
+        <p><%=item.content %></p>
+
+        <table>
+          <tr>
+            <td class="th">Title</td>
+            <td><%=item.title %></td>
+          </tr>
+          <tr>
+            <td class="th">Artist</td>
+            <td><%=item.artist %></td>
+          </tr>
+          <tr>
+            <td class="th">Date</td>
+            <td><%=item.date %></td>
+          </tr>
+        </table>
+
+        <nav class="vorigevolgende">
+          <% if(prev_id >= 0) { %>
+            <a class="vorige" href="/portraits/<%= prev_id %>"><i class="fas fa-arrow-left"></i></a>
+          <% } %>
+            <a class="terug" href="/portraits">View All</a>
+          <% if(next_id <= last_id) { %>
+            <a class="volgende" href="/portraits/<%= next_id %>"><i class="fas fa-arrow-right"></i></a>
+          <% } %>
+        </nav>
+      </div>
+    </div>
+
+  </article>
+
+<%- include("footer"); -%>
+<%- include("end"); -%>

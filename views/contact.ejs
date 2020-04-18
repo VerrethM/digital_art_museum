@@ -1,0 +1,46 @@
+<%- include("header"); -%>
+<%- include("nav"); -%>
+
+<div class="contact">
+  <div class="intro">
+    <div class="contain">
+    <h1>Hi, Nice To <br>Meet You</h1>
+    <p> Digital art is an art movement that uses digital technology as part of the creative or presentation process. Since the 1970s, various names have been used to describe the process, including computer art and multimedia art. The Digital Art Museum is a pioneering art institution founded by Marijke Verreth in 2020.</p>
+    <h2>Talk To Us</h2>
+    <p>A question about the Digital Art Museum or about one of our exhibitions? Would you like to make a suggestion or remark? Do you have an insight that you absolutely want to share with us? Perhaps you just want to enjoy a friendly talk? Don't hesitate. Contact us and we'll get back to you as soon as possible.</p>
+    <form>
+      <label>
+        First name
+        <input name="voornaam" class="voornaam" />
+      </label>
+      <label>
+        Last name
+        <input name="achternaam" class="achternaam" />
+      </label>
+      <label>
+        Email address
+        <input name="email" class="email" />
+      </label>
+      <label>
+        Personal message
+        <textarea name="bericht" class="bericht"></textarea>
+      </label>
+      <input type="submit" value="Get in touch" class="verzendknop" />
+    </form>
+    </div>
+  </div>
+  <div class="location">
+    <div class="contain">
+      <h2>Visit Us</h2>
+      <div id="mapid"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+<script src="/js/leaflet.js"></script>
+
+</script>
+
+<%- include("footer"); -%>
+<%- include("end"); -%>

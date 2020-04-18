@@ -1,0 +1,36 @@
+<%- include("header"); -%>
+<%- include("nav"); -%>
+
+<div class="home">
+  <div class="intro">
+    <div class="contain">
+      <h1>Digital Art Museum</h1>
+      <p>Digital Art Museum is a pioneering art institution, dedicated to commissioning, preserving and exhibiting cutting edge digital artworks. Conceived in 2020 by Marijke Verreth, the Digital Art Museum has already released three exhibitions, featuring 15 unique artists. </p>
+      <a href="/exhibitions">Exhibitions</a>
+    </div>
+  </div>
+  <div class="contain">
+    <h2>Featured work</h2>
+    <div class="featured">
+      <% for (let i=0; i<items.length; i++) { %>
+          <% if(items[i].featured) { %>
+            <%- include('featured-item', {item: items[i], index: i}); -%>
+          <% } %>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script type="text/javascript">
+  let elem = document.querySelector('.featured');
+  let flkty = new Flickity( elem, {
+    contain: true,
+    imagesLoaded: true,
+    cell: ".item"
+  });
+</script>
+
+
+<%- include("footer"); -%>
+<%- include("end"); -%>

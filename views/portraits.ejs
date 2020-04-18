@@ -1,0 +1,43 @@
+<%- include("header"); -%>
+<%- include("nav"); -%>
+
+<div class="portraits">
+  <div class="intro">
+    <div class="contain">
+      <h1>Powerful Portraits</h1>
+      <p>These powerful portraits were made with the digtal collage technique. Digital collage, in its form, is not new to the art scene. It uses the same production technique used in making a conventional hand-made collage, which is creating a whole new artwork from an assemblage of existing artistic materials.<br><br>Digital collage transcends the limits of manual hand-cutting and pasting. Artists manipulate the samples of existing artworks and assemble the images digitally with the use of particular computer programs, such as Adobe Photoshop and Adobe Illustrator, as an essential of the production process.</p>
+      <a href="/exhibitions">Go Back</a>
+    </div>
+  </div>
+  <div class="contain">
+    <input type="text" name="quicksearch" class="quicksearch" value="" placeholder="Search">
+
+    <!--
+    <div class="button-group filters-button-group">
+      <button class="button is-checked" data-filter="*">All</button>
+      <button class="button" data-filter=".fashion">Fashion</button>
+      <button class="button" data-filter=".flowers">Flowers</button>
+    </div>
+    -->
+    <select class="filters-select">
+      <option value="*">Show all</option>
+      <option value=".fashion">Fashion</option>
+      <option value=".flowers">Flowers</option>
+      <option value=".male">Male artists</option>
+      <option value=".female">Female artists</option>
+    </select>
+
+    <div class="grid">
+      <% for (let i=0; i<items.length; i++) { %>
+          <%- include('exhibition-item', {item: items[i], index: i}); -%>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="/js/isotope.js"></script>
+
+<%- include("footer"); -%>
+<%- include("end"); -%>

@@ -1,0 +1,15 @@
+{
+  "name": "1920_cmt4_verrethm_opdracht3",
+  "version": "1.0.0",
+  "description": "Museum app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marijke Verreth",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express": "^4.17.1"
+  }
+}
